@@ -1,0 +1,96 @@
+body
+{
+    margin: 0 auto;
+    padding: 10px 25px;
+    width: 1500px;
+    background-color: #f0f8ff;
+}
+
+.schedule
+{
+    border: 1px solid black;
+    border-collapse: collapse;
+    overflow: hidden;
+}
+
+td
+{
+    padding: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+th
+{
+    padding: 15px;
+    border: 1px solid black;
+    border-collapse: collapse;
+    background-color: #7D7D7D;
+}
+
+tr:nth-child(2n)
+{
+    background-color: #999;
+}
+
+tr:nth-child(2n+1)
+{
+    background-color: #CCC;
+}
+
+th:hover,
+td:hover
+{
+    position: relative;
+}
+
+tr:hover
+{
+    background-color: #FD0;
+}
+
+th:hover::after,
+td:hover::after
+{
+    content: "";
+    position: absolute;
+    left: 0px;
+    top: -50000px;
+    height: 500000px;
+    width: 100%;
+    background-color: #FD0;
+    z-index: 1;
+    pointer-events: none;
+    opacity: 0.3;
+}
+
+.logo
+{
+    height: 20px;
+    margin-right: 5px;
+}
+
+.submit-button
+{
+    display: none;
+}
+
+form:valid > .submit-button
+{
+    display: block;
+}
+
+label
+{
+    font-size: 15pt;
+    display: block;
+}
+
+input,
+button
+{
+    height: 40px;
+    font-size: 15pt;
+    margin-bottom: 10px;
+}
+

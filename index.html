@@ -6,13 +6,285 @@
         <link rel="stylesheet" href="index.css">
     </head>
     <body>
-        <!-- Поле для фильтрации по городу -->
         <input
             type="text"
             placeholder="Город отправления"
             value=""
             onkeyup="this.setAttribute('value', this.value)">
-
-        <!-- Здесь применять вашу самую сильную магию -->
+        <table class="schedule">
+            <thead class="header-schedule">
+                <tr>
+                    <th>Тип рейса</th>
+                    <th>Номер рейса</th>
+                    <th>Авиакомпания</th>
+                    <th>Логотип авиакомпании</th>
+                    <th>Тип воздушного судна</th>
+                    <th>Аэропорт назначения</th>
+                    <th>Плановое время вылета или прилёта</th>
+                    <th>Номер терминала</th>
+                    <th>Статус рейса</th>
+                </tr>
+            </thead>
+            <tbody class="body-schedule">
+                <tr>
+                    <td>Вылет</td>
+                    <td>4430</td>
+                    <td>Эйр Франс</td>
+                    <td>
+                        <img
+                            class="logo"
+                            src="http://svo.aero/r/7F140A14-936D-452E-8B8D-B14214707604/logo_af.png"
+                            alt="air-logo">
+                    </td>
+                    <td>А-321</td>
+                    <td>Екатеринбург(Кольцово)</td>
+                    <td><time datetime="2015-10-21T00:18">00:18, 21 октября 2015</time></td>
+                    <td>D</td>
+                    <td>Вылетел</td>
+                </tr>
+                <tr>
+                    <td>Прилет</td>
+                    <td>8153</td>
+                    <td>Эйр Сербиа</td>
+                    <td>
+                        <img
+                            class="logo"
+                            src="http://svo.aero/r/40390547-1522-4E0D-A8F5-C23955E3D6F4/as1.JPG"
+                            alt="air-logo">
+                    </td>
+                    <td>А-320</td>
+                    <td>Москва(Шереметьево)</td>
+                    <td><time datetime="2015-10-21T00:00">00:00, 21 октября 2015</time></td>
+                    <td>D</td>
+                    <td>Совершил посадку в <time datetime="00:04">00:04</time></td>
+                </tr>
+                <tr>
+                    <td>Прилет</td>
+                    <td>1727</td>
+                    <td>Аэрофлот</td>
+                    <td>
+                        <img
+                            class="logo"
+                            src="http://svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot_full.jpg"
+                            alt="air-logo">
+                    </td>
+                    <td>А-320</td>
+                    <td>Москва(Шереметьево)</td>
+                    <td><time datetime="2015-10-21T06:25">06:25, 21 октября 2015</time></td>
+                    <td>D</td>
+                    <td>Отменен</td>
+                </tr>
+				<tr>
+                    <td>Вылет</td>
+                    <td>2901</td>
+                    <td>Королевские Голландские Авиалинии</td>
+                    <td>
+                        <img
+                            class="logo"
+                            src="http://svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/KLM_full.jpg"
+                            alt="air-logo">
+                    </td>
+                    <td>А-320</td>
+                    <td>Краснодар(Пашковский)</td>
+                    <td><time datetime="2015-10-22T00:17">00:17, 22 октября 2015</time></td>
+                    <td>D</td>
+                    <td>Вылетел</td>
+                </tr>
+				<tr>
+                    <td>Вылет</td>
+                    <td>2942</td>
+                    <td>Королевские Голландские Авиалинии</td>
+                    <td>
+                        <img
+                            class="logo"
+                            src="http://svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/KLM_full.jpg"
+                            alt="air-logo">
+                    </td>
+                    <td>А-320</td>
+                    <td>Челябинск(Баландино)</td>
+                    <td><time datetime="2015-10-22T00:08">00:08, 22 октября 2015</time></td>
+                    <td>D</td>
+                    <td>Вылетел</td>
+                </tr>
+				<tr>
+                    <td>Вылет</td>
+                    <td>1408</td>
+                    <td>Аэрофлот</td>
+                    <td>
+                        <img
+                            class="logo"
+                            src="http://svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot_full.jpg"
+                            alt="air-logo">
+                    </td>
+                    <td>А-321</td>
+                    <td>Екатеринбург(Кольцово)</td>
+                    <td><time datetime="2015-10-22T00:05">00:05, 22 октября 2015</time></td>
+                    <td>D</td>
+                    <td>Вылетел</td>
+                </tr>
+				<tr>
+                    <td>Прилет</td>
+                    <td>1144</td>
+                    <td>Эйр Франс</td>
+                    <td>
+                        <img
+                            class="logo"
+                            src="http://svo.aero/r/7F140A14-936D-452E-8B8D-B14214707604/logo_af.png"
+                            alt="air-logo">
+                    </td>
+                    <td>А-319</td>
+                    <td>Париж(Шарль Де Голь)</td>
+                    <td><time datetime="2015-10-22T00:34">00:34, 22 октября 2015</time></td>
+                    <td>E</td>
+                    <td>Совершил посадку в <time datetime="00:27">00:27</time></td>
+                </tr>
+				<tr>
+                    <td>Прилет</td>
+                    <td>8153</td>
+                    <td>Эйр Сербиа</td>
+                    <td>
+                        <img
+                            class="logo"
+                            src="http://svo.aero/r/40390547-1522-4E0D-A8F5-C23955E3D6F4/as1.JPG"
+                            alt="air-logo">
+                    </td>
+                    <td>А-320</td>
+                    <td>Москва(Шереметьево)</td>
+                    <td><time datetime="2015-10-22T00:06">00:06, 22 октября 2015</time></td>
+                    <td>D</td>
+                    <td>Совершил посадку в <time datetime="00:00">00:00</time></td>
+                </tr>
+				<tr>
+                    <td>Вылет</td>
+                    <td>3948</td>
+                    <td>Алиталия</td>
+                    <td>
+                        <img
+                            class="logo"
+                            src="http://svo.aero/r/588230B8-B330-43C4-A574-864E59044B65/alitalia_big-1.jpg"
+                            alt="air-logo">
+                    </td>
+                    <td>А-321</td>
+                    <td>Новосибирск(Толмачево)</td>
+                    <td><time datetime="2015-10-22T00:42">00:42, 22 октября 2015</time></td>
+                    <td>D</td>
+                    <td>Вылетел</td>
+                </tr>
+				<tr>
+                    <td>Вылет</td>
+                    <td>4942</td>
+                    <td>Эйр Франс</td>
+                    <td>
+                        <img
+                            class="logo"
+                            src="http://svo.aero/r/7F140A14-936D-452E-8B8D-B14214707604/logo_af.png"
+                            alt="air-logo">
+                    </td>
+                    <td>А-320</td>
+                    <td>Казань(Казань)</td>
+                    <td><time datetime="2015-10-22T00:36">00:36, 22 октября 2015</time></td>
+                    <td>D</td>
+                    <td>Вылетел</td>
+                </tr>
+				<tr>
+                    <td>Вылет</td>
+                    <td>1196</td>
+                    <td>Аэрофлот</td>
+                    <td>
+                        <img
+                            class="logo"
+                            src="http://svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot_full.jpg"
+                            alt="air-logo">
+                    </td>
+                    <td>А-320</td>
+                    <td>Казань(Казань)</td>
+                    <td><time datetime="2015-10-22T00:22">00:22, 22 октября 2015</time></td>
+                    <td>D</td>
+                    <td>Вылетел</td>
+                </tr>
+				<tr>
+                    <td>Вылет</td>
+                    <td>4960</td>
+                    <td>Эйр Франс</td>
+                    <td>
+                        <img
+                            class="logo"
+                            src="http://svo.aero/r/7F140A14-936D-452E-8B8D-B14214707604/logo_af.png"
+                            alt="air-logo">
+                    </td>
+                    <td>А-320</td>
+                    <td>Уфа(Уфа)</td>
+                    <td><time datetime="2015-10-22T01:30">01:30, 22 октября 2015</time></td>
+                    <td>D</td>
+                    <td>Вылетел</td>
+                </tr>
+				<tr>
+                    <td>Прилет</td>
+                    <td>907</td>
+                    <td>Королевские Голландские Авиалинии</td>
+                    <td>
+                        <img
+                            class="logo"
+                            src="http://svo.aero/r/9AD7B5AC-FD74-44D2-AA21-DF28E057E93B/KLM_full.jpg"
+                            alt="air-logo">
+                    </td>
+                    <td>Боинг-737-800</td>
+                    <td>Амстердам(Схипхол)</td>
+                    <td><time datetime="2015-10-22T01:29">01:29, 22 октября 2015</time></td>
+                    <td>D</td>
+                    <td>Совершил посадку в <time datetime="01:26">01:26</time></td>
+                </tr>
+				<tr>
+                    <td>Вылет</td>
+                    <td>1845</td>
+                    <td>Аэрофлот</td>
+                    <td>
+                        <img
+                            class="logo"
+                            src="http://svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot_full.jpg"
+                            alt="air-logo">
+                    </td>
+                    <td>А-320</td>
+                    <td>Кишинев(Кишинев)</td>
+                    <td><time datetime="2015-10-22T02:26">02:26, 22 октября 2015</time></td>
+                    <td>D</td>
+                    <td>Вылетел</td>
+                </tr>
+				<tr>
+                    <td>Вылет</td>
+                    <td>1512</td>
+                    <td>Аэрофлот</td>
+                    <td>
+                        <img
+                            class="logo"
+                            src="http://svo.aero/r/238E07D9-752F-4DE4-8DE4-305E823670EC/aeroflot_full.jpg"
+                            alt="air-logo">
+                    </td>
+                    <td>А-320</td>
+                    <td>Сургут(Сургут)</td>
+                    <td><time datetime="2015-10-22T01:39">01:39, 22 октября 2015</time></td>
+                    <td>D</td>
+                    <td>Вылетел</td>
+                </tr>
+            </tbody>
+        </table>
+        <form class="send-form">
+            <label for="phone">Телефон</label>
+            <input
+                id="phone"
+                type="tel"
+                value=""
+                placeholder="Введите телефон..."
+                pattern="((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}"
+                required>
+            <label for="email">Email</label>
+            <input
+                id="email"
+                type="email"
+                value=""
+                placeholder="Введите email..."
+                required>
+            <button class="submit-button" type="submit">Отправить</button>
+        </form>
     </body>
 </html>
