@@ -8,9 +8,32 @@
     <body>
         <input
             type="text"
-            placeholder="Город отправления"
+            class="search"
+            placeholder="Город отправления."
             value=""
             onkeyup="this.setAttribute('value', this.value)">
+        <input
+            id="direct-all"
+            type="radio"
+            class="direct-filter"
+            name="radio-direction"
+            value="all"
+            checked>
+        <label for="direct-all">Все</label>
+        <input
+            id="direct-in"
+            type="radio"
+            class="direct-filter"
+            name="radio-direction"
+            value="in">
+        <label for="direct-in">Прилет</label>
+        <input
+            id="direct-out"
+            type="radio"
+            class="direct-filter"
+            name="radio-direction"
+            value="out">
+        <label for="direct-out">Вылет</label>
         <table class="schedule">
             <thead class="header-schedule">
                 <tr>
@@ -26,7 +49,7 @@
                 </tr>
             </thead>
             <tbody class="body-schedule">
-                <tr>
+                <tr class="out-row" content="Екатеринбург">
                     <td>Вылет</td>
                     <td>4430</td>
                     <td>Эйр Франс</td>
@@ -42,7 +65,7 @@
                     <td>D</td>
                     <td>Вылетел</td>
                 </tr>
-                <tr>
+                <tr class="in-row" content="Москва">
                     <td>Прилет</td>
                     <td>8153</td>
                     <td>Эйр Сербиа</td>
@@ -58,7 +81,7 @@
                     <td>D</td>
                     <td>Совершил посадку в <time datetime="00:04">00:04</time></td>
                 </tr>
-                <tr>
+                <tr class="in-row" content="Москва">
                     <td>Прилет</td>
                     <td>1727</td>
                     <td>Аэрофлот</td>
@@ -74,7 +97,7 @@
                     <td>D</td>
                     <td>Отменен</td>
                 </tr>
-                <tr>
+                <tr class="out-row" content="Краснодар">
                     <td>Вылет</td>
                     <td>2901</td>
                     <td>Королевские Голландские Авиалинии</td>
@@ -90,7 +113,7 @@
                     <td>D</td>
                     <td>Вылетел</td>
                 </tr>
-                <tr>
+                <tr class="out-row" content="Челябинск">
                     <td>Вылет</td>
                     <td>2942</td>
                     <td>Королевские Голландские Авиалинии</td>
@@ -106,7 +129,7 @@
                     <td>D</td>
                     <td>Вылетел</td>
                 </tr>
-                <tr>
+                <tr class="out-row" content="Екатеринбург">
                     <td>Вылет</td>
                     <td>1408</td>
                     <td>Аэрофлот</td>
@@ -122,7 +145,7 @@
                     <td>D</td>
                     <td>Вылетел</td>
                 </tr>
-                <tr>
+                <tr class="in-row" content="Париж">
                     <td>Прилет</td>
                     <td>1144</td>
                     <td>Эйр Франс</td>
@@ -138,7 +161,7 @@
                     <td>E</td>
                     <td>Совершил посадку в <time datetime="00:27">00:27</time></td>
                 </tr>
-                <tr>
+                <tr class="in-row" content="Москва">
                     <td>Прилет</td>
                     <td>8153</td>
                     <td>Эйр Сербиа</td>
@@ -154,7 +177,7 @@
                     <td>D</td>
                     <td>Совершил посадку в <time datetime="00:00">00:00</time></td>
                 </tr>
-                <tr>
+                <tr class="out-row" content="Новосибирск">
                     <td>Вылет</td>
                     <td>3948</td>
                     <td>Алиталия</td>
@@ -170,7 +193,7 @@
                     <td>D</td>
                     <td>Вылетел</td>
                 </tr>
-                <tr>
+                <tr class="out-row" content="Казань">
                     <td>Вылет</td>
                     <td>4942</td>
                     <td>Эйр Франс</td>
@@ -186,7 +209,7 @@
                     <td>D</td>
                     <td>Вылетел</td>
                 </tr>
-                <tr>
+                <tr class="out-row" content="Казань">
                     <td>Вылет</td>
                     <td>1196</td>
                     <td>Аэрофлот</td>
@@ -202,7 +225,7 @@
                     <td>D</td>
                     <td>Вылетел</td>
                 </tr>
-                <tr>
+                <tr class="out-row" content="Уфа">
                     <td>Вылет</td>
                     <td>4960</td>
                     <td>Эйр Франс</td>
@@ -218,7 +241,7 @@
                     <td>D</td>
                     <td>Вылетел</td>
                 </tr>
-                <tr>
+                <tr class="in-row" content="Амстердам">
                     <td>Прилет</td>
                     <td>907</td>
                     <td>Королевские Голландские Авиалинии</td>
@@ -234,7 +257,7 @@
                     <td>D</td>
                     <td>Совершил посадку в <time datetime="01:26">01:26</time></td>
                 </tr>
-                <tr>
+                <tr class="out-row" content="Кишинев">
                     <td>Вылет</td>
                     <td>1845</td>
                     <td>Аэрофлот</td>
@@ -250,7 +273,7 @@
                     <td>D</td>
                     <td>Вылетел</td>
                 </tr>
-                <tr>
+                <tr class="out-row" content="Сургут">
                     <td>Вылет</td>
                     <td>1512</td>
                     <td>Аэрофлот</td>
@@ -274,7 +297,7 @@
                 id="phone"
                 type="tel"
                 value=""
-                placeholder="Введите телефон..."
+                placeholder="Введите телефон."
                 pattern="((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}"
                 required>
             <label for="email">Email</label>
@@ -282,7 +305,8 @@
                 id="email"
                 type="email"
                 value=""
-                placeholder="Введите email..."
+                placeholder="Введите email."
+                pattern="[_\-a-zа-я0-9]+@[_\-a-zа-я0-9]+(\.[a-zа-я0-9]+)?(\.[a-zа-я]+)"
                 required>
             <button class="submit-button" type="submit">Отправить</button>
         </form>
