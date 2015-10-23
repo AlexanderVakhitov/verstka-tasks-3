@@ -6,6 +6,45 @@ body
     background-color: #f0f8ff;
 }
 
+label
+{
+    font-size: 25px;
+}
+
+.search
+{
+    font-size: 25px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.direct-filter[value="in"]:checked~.schedule .out-row,
+.direct-filter[value="out"]:checked~.schedule .in-row
+{
+    display: none;
+}
+
+.body-schedule tr:nth-child(n)
+{
+    display: none;
+}
+
+.search[value=""]~.schedule tr,
+.search[value="Екатеринбург"]~.schedule tr[content="Екатеринбург"],
+.search[value="Москва"]~.schedule tr[content="Москва"],
+.search[value="Краснодар"]~.schedule tr[content="Краснодар"],
+.search[value="Челябинск"]~.schedule tr[content="Челябинск"],
+.search[value="Париж"]~.schedule tr[content="Париж"],
+.search[value="Новосибирск"]~.schedule tr[content="Новосибирск"],
+.search[value="Казань"]~.schedule tr[content="Казань"],
+.search[value="Уфа"]~.schedule tr[content="Уфа"],
+.search[value="Амстердам"]~.schedule tr[content="Амстердам"],
+.search[value="Кишинев"]~.schedule tr[content="Кишинев"],
+.search[value="Сургут"]~.schedule tr[content="Сургут"]
+{
+    display: table-row;
+}
+
 .schedule
 {
     border: 1px solid black;
@@ -13,84 +52,70 @@ body
     overflow: hidden;
 }
 
-td
+.schedule th,
+.schedule td
 {
     padding: 15px;
     border: 1px solid black;
     border-collapse: collapse;
-}
-
-th
-{
-    padding: 15px;
-    border: 1px solid black;
-    border-collapse: collapse;
-    background-color: #7D7D7D;
-}
-
-tr:nth-child(2n)
-{
-    background-color: #999;
-}
-
-tr:nth-child(2n+1)
-{
-    background-color: #CCC;
-}
-
-th:hover,
-td:hover
-{
     position: relative;
 }
 
-tr:hover
+.schedule .header-schedule
 {
-    background-color: #FD0;
+    background-color: #7D7D7D;
 }
 
-th:hover::after,
-td:hover::after
+.schedule tr:nth-child(even) td::before
 {
     content: "";
     position: absolute;
-    left: 0px;
-    top: -50000px;
-    height: 500000px;
+    background-color: #CCC;
+    left: 0;
+    top: 0;
     width: 100%;
-    background-color: #FD0;
-    z-index: 1;
-    pointer-events: none;
-    opacity: 0.3;
+    height: 100%;
+    z-index: -2;
 }
 
-.logo
+.body-schedule tr:hover
+{
+    background-color: #FD0;
+}
+
+.schedule th:hover::after,
+.schedule td:hover::after
+{
+    content: "";
+    position: absolute;
+    background-color: #FD0;
+    left: 0;
+    top: -1000px;
+    width: 100%;
+    height: 35000px;
+    z-index: -1;
+}
+
+.schedule .logo
 {
     height: 20px;
     margin-right: 5px;
 }
 
-.submit-button
+.send-form .submit-button
 {
     display: none;
 }
 
-form:valid > .submit-button
+.send-form form:valid .submit-button
 {
     display: block;
 }
 
-label
+.send-form input,
+.send-form button
 {
-    font-size: 15pt;
-    display: block;
-}
-
-input,
-button
-{
-    height: 40px;
-    font-size: 15pt;
+    font-size: 25px;
     margin-bottom: 10px;
+    display: block;
 }
-
