@@ -90,9 +90,9 @@ label
     position: absolute;
     background-color: #FD0;
     left: 0;
-    top: -1000px;
+    top: -50000px;
     width: 100%;
-    height: 35000px;
+    height: 100000px;
     z-index: -1;
 }
 
@@ -107,7 +107,7 @@ label
     display: none;
 }
 
-.send-form form:valid .submit-button
+.send-form:valid .submit-button
 {
     display: block;
 }

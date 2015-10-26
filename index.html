@@ -297,15 +297,15 @@
                 id="phone"
                 type="tel"
                 value=""
-                placeholder="Введите телефон."
-                pattern="((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}"
+                placeholder="Тел. +7 (926) 123-45-67"
+                pattern="\+?\d{1,2} *(\d{3}|\(\d{3}\)) *(\d[ \-]?){7}"
                 required>
             <label for="email">Email</label>
             <input
                 id="email"
                 type="email"
                 value=""
-                placeholder="Введите email."
+                placeholder="Email."
                 pattern="[_\-a-zа-я0-9]+@[_\-a-zа-я0-9]+(\.[a-zа-я0-9]+)?(\.[a-zа-я]+)"
                 required>
             <button class="submit-button" type="submit">Отправить</button>
